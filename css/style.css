@@ -1,0 +1,166 @@
+:root {
+
+    --bg-main: rgb(2, 2, 39);
+    --bg-calculator: rgba(32, 32, 32, 0.7);
+    --border-color: rgb(47, 47, 60);
+
+    --key-bg-operator: rgb(50, 50, 50, 0.4);
+    --key-bg-operator-hover: rgb(60, 60, 60, 0.5);
+    --key-bg-number: rgb(60, 60, 60, 0.5);
+    --key-bg-number-hover: rgb(80, 80, 80);
+
+    --key-bg-equals: rgb(48, 185, 253);
+    --key-bg-equals-hover: rgb(70, 166, 214);
+
+    --text-color: rgb(255, 255, 255);
+    --text-color-equals: rgb(20, 49, 65);
+}
+
+
+
+body.light-mode {
+    --bg-main: #f3f3f3;
+    --bg-calculator: rgba(243, 243, 243, 0.85);
+    --border-color: #e5e5e5;
+
+
+    --key-bg-operator: rgba(249, 249, 249, 0.7);
+    --key-bg-operator-hover: #ebebeb;
+
+
+    --key-bg-number: #ffffff;
+    --key-bg-number-hover: #f9f9f9;
+
+
+    --key-bg-equals: #0067c0;
+    --key-bg-equals-hover: #005fb8;
+
+
+    --text-color: #1a1a1a;
+    --text-color-equals: #ffffff;
+}
+
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    color: var(--text-color);
+}
+
+.calculator {
+
+
+    background: var(--bg-calculator);
+
+
+    width: 400px;
+    height: 665px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+
+.visor .default_number {
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 50px;
+
+
+    font-size: 40px;
+    color: var(--text-color);
+
+}
+
+.teclado {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 2px;
+
+
+    margin-top: auto;
+}
+
+
+.key-operator,
+.key-operator-equals,
+.key-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    border-radius: 5px;
+    height: 60px;
+    font-size: 18px;
+    background-color: var(--key-bg-number);
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 0.5px solid var(--border-color);
+}
+
+.key-number:hover {
+    background-color: var(--key-bg-number-hover);
+}
+
+.key-operator-equals {
+    display: flex;
+    background-color: var(--key-bg-equals);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--text-color-equals);
+
+}
+
+.key-operator-equals:hover {
+    cursor: pointer;
+    transition: background 0.2s;
+    background-color: var(--key-bg-equals-hover);
+}
+
+.key-operator {
+    background-color: var(--key-bg-operator);
+}
+
+.key-operator:hover {
+    background-color: var(--key-bg-operator-hover);
+}
+
+
+.btn-theme {
+    align-self: flex-start;
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-theme:hover {
+    background: rgba(128, 128, 128, 0.2);
+}
